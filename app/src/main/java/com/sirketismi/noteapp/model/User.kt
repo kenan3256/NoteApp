@@ -9,5 +9,6 @@ data class User(
     @PrimaryKey(autoGenerate = true) val id : Int = 0,
     @ColumnInfo(name = "name") val name : String?,
     @ColumnInfo(name = "surname") val surname : String?,
+    @ColumnInfo(name = "tag") val tag : String?,
     @ColumnInfo(name = "age") val age : Int) {
 }

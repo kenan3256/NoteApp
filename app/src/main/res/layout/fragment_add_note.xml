@@ -98,6 +98,26 @@
                 android:text="@{viewModel.noteDateText}"
                 android:onClick="@{()->viewModel.onShowDatePicker()}"/>
 
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/noteTagLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="NoteName"
+                app:layout_constraintTop_toBottomOf="@id/noteTitleLayout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/noteTagText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:text="@={viewModel.noteTag}"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.button.MaterialButton
